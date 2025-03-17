@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marker+Felt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+
+@import 'tailwindcss';
+
+@theme {
+
+    --font-lobster: 'Lobster', cursive;
+    --font-handwriting: 'Pacifico', cursive;
+    --font-marker: 'Marker', cursive;
+    --font-caveat: 'Caveat', cursive;
+
+}
+
+/* Ribbon */
+.ribbon-2 {
+    --f: 10px; /* control the folded part*/
+    --r: 15px; /* control the ribbon shape */
+    --t: 20px; /* the top offset */
+    
+    
+    position: absolute;
+    inset: var(--t) calc(-1*var(--f)) auto auto;
+    padding: 0 10px var(--f) calc(10px + var(--r));
+    clip-path: 
+      polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+        calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+        var(--r) calc(50% - var(--f)/2));    
+    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+  }
+
+
+
+  :root {
+    --pink: #ecb2ba;
+    --pink-dark: #c6939a;
+    --tape-gray: #dbd8be;
+    --tape-edge-gray: #b7b49d;
+    --transparent: rgba(255, 255, 255, 0);
+  }
+  
+  body {
+    background: #ebf4e9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .pink {
+    --paper-color: var(--pink);
+    --paper-dark: var(--pink-dark);
+    --shadow-size: 1px;
+    --transparent: rgba(236, 178, 186, 0);
+  }
+  
+  .blue {
+    --paper-color: #d5e0f9;
+    --paper-dark: #c2d0ea;
+    --shadow-size: 3px;
+    --transparent: rgba(213, 224, 249, 0);
+  }
+
+  .yellow {
+    --paper-color: #fdfd96;
+    --paper-dark: #f0e68c;
+    --shadow-size: 2px;
+    --transparent: rgba(253, 253, 150, 0);
+  }
+  
+  .green {
+    --paper-color: #c5f5c1;
+    --paper-dark: #a8d5a2;
+    --shadow-size: 2px;
+    --transparent: rgba(197, 245, 193, 0);
+  }
+  
+  .orange {
+    --paper-color: #ffcc99;
+    --paper-dark: #f4a460;
+    --shadow-size: 3px;
+    --transparent: rgba(255, 204, 153, 0);
+  }
+  
+  .purple {
+    --paper-color: #e0b0ff;
+    --paper-dark: #d4a0f5;
+    --shadow-size: 3px;
+    --transparent: rgba(224, 176, 255, 0);
+  }
+  
+  .red {
+    --paper-color: #ffadad;
+    --paper-dark: #ff6f6f;
+    --shadow-size: 3px;
+    --transparent: rgba(255, 173, 173, 0);
+  }
+  
+  .paper {
+    position: relative;
+    background: linear-gradient(
+        to bottom right,
+        var(--paper-dark),
+        20%,
+        var(--transparent)
+      ),
+      var(--paper-color);
+    min-width: 250px;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    font-size: 2rem;
+    box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .paper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        var(--transparent),
+        50%,
+        var(--paper-dark),
+        51%,
+        var(--transparent)
+      ),
+      linear-gradient(
+        to right,
+        var(--transparent),
+        50%,
+        var(--paper-dark),
+        51%,
+        var(--transparent)
+      );
+  }
+  
+  .tape-section {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .top-tape {
+    position: absolute;
+    height: 4vmin;
+    top: -5px;
+    width: 110%;
+    background-color: var(--tape-gray);
+    border-right: 1px dotted var(--tape-edge-gray);
+    border-left: 1px dotted var(--tape-edge-gray);
+    opacity: 0.5;
+  }
+  
+  .tape-section:first-of-type {
+    top: 0;
+  }
+  
+  .tape-section:last-of-type {
+    bottom: 0;
+  }
+  
+  .tape-section::before,
+  .tape-section::after {
+    content: "";
+    width: 10vmin;
+    height: 4vmin;
+    position: absolute;
+    background-color: var(--tape-gray);
+    opacity: 0.5;
+    border-right: 1px dotted var(--tape-edge-gray);
+    border-left: 1px dotted var(--tape-edge-gray);
+  }
+  
+  .tape-section:last-of-type::after {
+    transform: rotate(-45deg);
+    right: -4vmin;
+    top: -3vmin;
+  }
+  
+  .tape-section:first-of-type::before {
+    transform: rotate(-45deg);
+    left: -4vmin;
+  }
+  
+  .tape-section:first-of-type::after {
+    transform: rotate(45deg);
+    right: -4vmin;
+    top: 0;
+  }
+  
+  .tape-section:last-of-type::before {
+    transform: rotate(45deg);
+    left: -4vmin;
+    bottom: 0;
+  }
+
+
