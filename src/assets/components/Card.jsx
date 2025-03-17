@@ -38,7 +38,7 @@ const Card = ({ card, listId, onCardDeleted, onCardUpdated, provided }) => {
 
     return (
         
-        <div ref={provided.innerRef} {...provided.draggableProps} className={`p-4 flex justify-between items-center mb-4 shadow-md font-caveat paper ${randomPostItColor}`} data-list-id={listId} data-card-id={card.id} data-card-position={card.position}>
+        <div ref={provided.innerRef} {...provided.draggableProps} className={`max-w-[90%] p-4 flex justify-between items-center mb-4 shadow-md font-caveat paper ${randomPostItColor}`} data-list-id={listId} data-card-id={card.id} data-card-position={card.position}>
             <div className={`${randomTapeEffect}`}></div>
             <i className="fas fa-arrows-alt drag-button p-2 cursor-grab absolute top-0 left-0 z-10 text-xl text-gray-700" {...provided.dragHandleProps}></i>
             <p className={`break-words p-2 text-3xl text-gray-800 ${randomRotateEffect} ${randomFontSizeEffect}`}>{card.content}</p>
