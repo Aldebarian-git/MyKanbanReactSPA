@@ -13,8 +13,17 @@ const Main = () => {
     fetchLists();
   }, []);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (isLoading) return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="p-6 bg-white shadow-lg rounded-lg flex flex-col items-center">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
+        <p className="mt-4 text-gray-700 font-medium">Chargement de vos listes...</p>
+      </div>
+    </div>
+  );
+  
+  if (error) return <div className="text-red-500 text-center mt-5">Erreur : {error}</div>;
+  
 
   const handleListAdded = (newList) => {
     setLists((prevLists) => [...prevLists, newList]); // ✅ Mise à jour propre
