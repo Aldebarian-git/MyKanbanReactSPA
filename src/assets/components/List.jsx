@@ -75,7 +75,7 @@ const List = ({
       >
         {(provided) => (
           <div
-            className="pr-6 pl-6"
+            className="pr-2 pl-2"
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
