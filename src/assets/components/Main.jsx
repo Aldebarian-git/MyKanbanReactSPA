@@ -79,7 +79,7 @@ const Main = () => {
     <div>
       <div className="flex justify-end max-w-[95%] mx-auto p-4">
         <Button 
-          className="bg-transparent text-gray-800 hover:scale-110 transition-all duration-300 text-3xl font-caveat py-0"
+          className="bg-transparent text-gray-800 hover:scale-110 transition-all duration-300 text-3xl font-caveat py-0 border-none"
           color="transparent"
           colorValue="500"          
           colorHoverValue="700"
