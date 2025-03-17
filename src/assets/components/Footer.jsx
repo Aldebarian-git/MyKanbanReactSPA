@@ -29,7 +29,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-sm mt-4">&copy; 2025 My Kanban's Board. All rights reserved.</p>
-        <div className="tape-section"></div>
+        
       </div>
       
     </footer>
