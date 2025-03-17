@@ -47,7 +47,7 @@ const Modal = ({ isOpen, onClose, onListAdded, lists}) => {
             
             <Button
               onClick={onClose}>                            
-              <i className="fa fa-times text-gray-500 hover:text-red-800" aria-hidden="true"></i>
+              <i className="fa fa-times text-gray-500 hover:text-red-800 cursor-pointer" aria-hidden="true"></i>
             </Button>
           </div>
 
@@ -69,8 +69,8 @@ const Modal = ({ isOpen, onClose, onListAdded, lists}) => {
           </div>
 
           <div className="modal-card-foot flex justify-end space-x-4">
-            <Button color="blue" colorValue="500" colorHover="blue" colorHoverValue="700" type="submit">Ajouter</Button>
-            <Button onClick={onClose} color="gray" colorValue="500" colorHover="gray" colorHoverValue="900">Annuler</Button>
+            <Button color="blue" colorValue="500" colorHover="blue" colorHoverValue="700" type="submit" className="text-white hover:bg-blue-600 transition-colors duration-300 cursor-pointer">Ajouter</Button>
+            <Button onClick={onClose} color="gray" colorValue="500" colorHover="gray" colorHoverValue="900" className="text-white hover:bg-gray-600 transition-colors duration-300 cursor-pointer">Annuler</Button>
           </div>
         </form>
       </div>

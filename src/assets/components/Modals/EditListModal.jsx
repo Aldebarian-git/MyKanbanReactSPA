@@ -60,7 +60,7 @@ const EditListModal = ({ onClose, list, onListUpdated }) => {
           <div className="modal-card-head flex justify-between items-center mb-4">
             <p className="text-lg font-medium">Modifier la liste</p>
             <button
-              className="text-gray-500 hover:text-gray-800"
+              className="text-gray-500 hover:text-gray-800 cursor-pointer"
               type="button"
               onClick={onClose}
             >
@@ -86,11 +86,11 @@ const EditListModal = ({ onClose, list, onListUpdated }) => {
           </div>
 
           <div className="modal-card-foot flex justify-end space-x-4">
-            <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md">
+            <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 cursor-pointer">
               Mettre à jour
             </button>
             <button
-              className="bg-gray-500 text-white py-2 px-4 rounded-md"
+              className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors duration-300 cursor-pointer"
               onClick={onClose}
             >
               Annuler
