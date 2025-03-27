@@ -46,7 +46,7 @@ const EditCardModal = ({ onClose, card, onCardUpdated}) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/20 backdrop-blur-sm flex justify-center items-center z-50"
+      className="fixed inset-0 bg-black/20 backdrop-blur-sm flex justify-center items-center z-50 font-sans"
       onClick={onClose}
     >
       <div
@@ -55,7 +55,7 @@ const EditCardModal = ({ onClose, card, onCardUpdated}) => {
       >
         <form onSubmit={handleSubmit}>
           <div className="modal-card-head flex justify-between items-center mb-4">
-            <p className="text-lg font-medium">Modifier la carte</p>
+            <h1 className="text-xl">Modifier la carte</h1>
             <button
               className="text-gray-500 hover:text-gray-800 cursor-pointer"
               type="button"
@@ -68,13 +68,13 @@ const EditCardModal = ({ onClose, card, onCardUpdated}) => {
           <div className="modal-card-body mb-4">
             <label
               htmlFor="modify-card-content"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-lg text-gray-700"
             >
               Contenu
             </label>
-            <input
+            <textarea
               id="modify-card-content"
-              className="w-full p-2 mt-1 border border-gray-300 rounded-md"
+              className="w-full p-2 mt-1 border border-gray-300 rounded-md text-xl"
               placeholder="Contenu de la carte"
               value={content}
               onChange={(e) => setContent(e.target.value)} // Met à jour l'état de la description
@@ -84,13 +84,13 @@ const EditCardModal = ({ onClose, card, onCardUpdated}) => {
           <div className="modal-card-foot flex justify-end space-x-4">
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 cursor-pointer"
+              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 cursor-pointer text-xl"
             >
               Mettre à jour
             </button>
             <button
               type="button"
-              className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors duration-300 cursor-pointer"
+              className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition-colors duration-300 cursor-pointer text-xl"
               onClick={onClose}
             >
               Annuler

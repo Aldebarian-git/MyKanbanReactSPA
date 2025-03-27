@@ -28,7 +28,7 @@ const DeleteCardModal = ({ onClose, cardId, onCardDeleted }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <h1 className="text-xl">Supprimer la carte</h1> 
-        <p className="text-lg">Voulez-vous vraiment supprimer cette carte ?</p>
+        <p className="text-lg my-2">Voulez-vous vraiment supprimer cette carte ?</p>
         <div className="modal-card-foot flex justify-end space-x-4">
           <button
             type="submit"
