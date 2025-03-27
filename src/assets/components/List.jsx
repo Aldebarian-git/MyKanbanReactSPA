@@ -24,7 +24,7 @@ const List = ({
       data-type="list"
       data-id={listId}
       data-position={list.position}
-      className="relative max-w-[600px] bg-gradient-to-br from-yellow-300 via-yellow-300 to-yellow-400 shadow-xl pt-16 pb-4 pl-4 pr-4"
+      className="relative max-w-[600px] bg-gradient-to-br from-yellow-300 via-yellow-300 to-yellow-400 shadow-xl pt-16 pb-4 pl-4 pr-4 pb-9"
       ref={provided.innerRef}
       {...provided.draggableProps}
     >
