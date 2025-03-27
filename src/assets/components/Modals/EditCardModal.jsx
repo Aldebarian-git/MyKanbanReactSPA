@@ -18,8 +18,7 @@ const EditCardModal = ({ onClose, card, onCardUpdated}) => {
       try {
         // Logique pour mettre à jour la liste
         const updatedCard = { ...card, content }; // Crée un nouvel objet liste avec le titre mis à jour
-        console.log("updatedCard", updatedCard);
-        
+                
         // Appel à la fonction pour mettre à jour la liste (par exemple, via une API ou un state global)
         if(updatedCard.content !== card.content){
           await patchCard(updatedCard.id, {content: updatedCard.content}); // Appelle la fonction de mise à jour

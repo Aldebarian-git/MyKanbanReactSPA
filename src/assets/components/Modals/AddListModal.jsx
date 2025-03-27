@@ -11,7 +11,7 @@ const Modal = ({ isOpen, onClose, onListAdded, lists}) => {
     e.preventDefault();
 
     if (!title.trim()) {
-      console.log("Le titre est requis");
+      showToast("Titre requis")
       return;
     }
 
